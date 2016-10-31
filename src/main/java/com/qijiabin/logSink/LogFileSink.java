@@ -15,7 +15,16 @@ import org.slf4j.LoggerFactory;
  * 日 期：2016年10月31日 下午3:38:41
  * 版 本：1.0.0
  * 类说明：自定义flume sink
- * TODO
+ * 
+ * 1、创建一个agent，sink类型需指定为自定义sink
+ *  agent.sinks.sk1.type = com.qijiabin.logSink.LogFileSink  
+ *	agent.sinks.sk1.channel = c1  
+ *	agent.sinks.sk1.rootPath = /opt/logs/log/sink.log
+ * 
+ * 2、创建自定义sink(LogFileSink)
+ * 将代码打包为logFileSink.jar后复制到flume所在节点上的flume/lib目录下
+ * 
+ * 3、启动flume
  * ========================================================
  * 修订日期     修订人    描述
  */
